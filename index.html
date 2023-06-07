@@ -10,15 +10,18 @@
 
 <body>
     <div class="profile">
-        <div class="sidebar">
-            <div class="top">
-            <div href="#" class="elem">About</a>
-            <div href="#" class="elem">Projects</a>
-            <div href="#" class="elem">Works</a>
-            </div>
-            <div class="bottom">
-            <div href="#" class="id">@K2E7</a>
-            <div href="#" class="id">Sriparno Ganguly</a>
+        <div class="sidebar-container">
+            <div class="sidebar">
+                <ul class="top">
+                    <li href="#" class="elem">About</a>
+                    <li href="#" class="elem">Projects</a>
+                    <li href="#" class="elem">Works</a>
+                </ul>
+                <div class="sidebar-buffer"></div>
+                <ul class="bottom">
+                    <li href="#" class="id">@K2E7</a>
+                    <li href="#" class="id">Sriparno Ganguly</a>
+                </ul>
             </div>
         </div>
     </div>
@@ -39,29 +42,33 @@
         max-width: 1350px;
         display: grid;
         height: 90vh;
-        max-height: 800px;
         overflow: hidden;
         grid-template-columns: 15% 20% 35% 30%;
         grid-template-rows: 100%;
         width: 100%;
-        padding: 40px 4px;
         position: relative;
     }
 
     .sidebar {
         display: flex;
+        height: 90vh;
         flex-direction: column;
         border-right: 1px solid #94918f;
+    }
+
+    .sidebar li {
+        list-style: none;
+        margin-left: -2vw;
     }
 
     .elem {
         font-family: "Geologica";
         font-weight: 200;
-        font-size: 1.4vw;
+        font-size: 1.3vw;
         color: #161419;
         padding-top: 1.4vw;
         letter-spacing: -0.05vw;
-        flex-grow : 1;
+        flex-grow: 1;
 
     }
 
@@ -74,7 +81,7 @@
         font-weight: 200;
         font-size: 1.2vw;
         color: #161419;
-        padding-top: 1vh;
+        padding-top: 1.1vw;
         letter-spacing: -0.05vw;
 
     }
