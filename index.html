@@ -1,88 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Knight</title>
-</head>
-
-<body>
-    <div class="profile">
-        <div class="sidebar-container">
-            <div class="sidebar">
-                <ul class="top">
-                    <li href="#" class="elem">About</a>
-                    <li href="#" class="elem">Projects</a>
-                    <li href="#" class="elem">Works</a>
-                </ul>
-                <div class="sidebar-buffer"></div>
-                <ul class="bottom">
-                    <li href="#" class="id">@K2E7</a>
-                    <li href="#" class="id">Sriparno Ganguly</a>
-                </ul>
-            </div>
-        </div>
+<div class="profile">
+    <div class="sidebar is-open">
+        <a href="#" class="sidebar-elem">About</a>
+        <a href="#" class="sidebar-elem">Projects</a>
+        <a href="#" class="sidebar-elem">Works</a>
+        <a href="#" class="sidebar-elem mentions">@K2E7</a>
+        <a href="#" class="sidebar-elem name">Sriparno Ganguly</a>
     </div>
-</body>
-
-</html>
+</div>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@200&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+    * {
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    html {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+    }
 
     body {
-        background-color: #e9e6e4;
-        padding: 0 1vw;
+        background-color: #121418;
+        display: flex;
+        font-family: "Geologica", sans-serif;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 2em;
+        font-weight: 400;
+        height: 100vh;
     }
 
     .profile {
+        background-color: #e9e6e4;
         max-width: 1350px;
         display: grid;
         height: 90vh;
+        max-height: 800px;
         overflow: hidden;
         grid-template-columns: 15% 20% 35% 30%;
         grid-template-rows: 100%;
         width: 100%;
+        padding: 40px 4px;
         position: relative;
     }
 
     .sidebar {
-        display: flex;
-        height: 90vh;
-        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .sidebar:not(:last-child) {
         border-right: 1px solid #94918f;
     }
 
-    .sidebar li {
-        list-style: none;
-        margin-left: -2vw;
-    }
-
-    .elem {
-        font-family: "Geologica";
-        font-weight: 200;
-        font-size: 1.3vw;
+    .sidebar-elem {
+        font-size: 1.6vw;
+        text-decoration: none;
         color: #161419;
-        padding-top: 1.4vw;
-        letter-spacing: -0.05vw;
-        flex-grow: 1;
-
+        display: flex;
+        letter-spacing: -0.5px;
+        align-items: center;
     }
 
-    .bottom {
+    .sidebar-elem+.sidebar-elem {
+        margin-top: 24px;
+    }
+
+    .sidebar-elem.mentions {
         margin-top: auto;
+        font-size : 1.4vw;
     }
 
-    .id {
-        font-family: "Geologica";
-        font-weight: 200;
-        font-size: 1.2vw;
-        color: #161419;
-        padding-top: 1.1vw;
-        letter-spacing: -0.05vw;
-
+    .sidebar-elem.name {
+        margin-top : 8px;
+        font-size : 1.4vw;
+        position : relative;
     }
 </style>
