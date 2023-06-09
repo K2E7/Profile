@@ -1,82 +1,69 @@
-<div class="profile">
-    <div class="sidebar is-open">
-        <a href="#" class="sidebar-elem">About</a>
-        <a href="#" class="sidebar-elem">Projects</a>
-        <a href="#" class="sidebar-elem">Works</a>
-        <a href="#" class="sidebar-elem mentions">@K2E7</a>
-        <a href="#" class="sidebar-elem name">Sriparno Ganguly</a>
+<div class="canvas">
+    <div class="sidebar-cont collapse">
+        <div class="sidebar">
+            <a href="#" class="sidebar-elem">About</a>
+            <a href="#" class="sidebar-elem mid">Works</a>
+            <a href="#" class="sidebar-elem mid">Projects</a>
+            <a href="#" class="sidebar-elem mention">@K2E7</a>
+            <a href="#" class="sidebar-elem name">Sriparno Ganguly</a>
+        </div>
     </div>
 </div>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@200&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-    * {
-        outline: none;
-        box-sizing: border-box;
-    }
-
-    html {
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-    }
-
     body {
-        background-color: #121418;
         display: flex;
-        font-family: "Geologica", sans-serif;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        width: 100%;
-        padding: 0 2em;
-        font-weight: 400;
-        height: 100vh;
+        justify-content: center;
+        background-color: #232323;
     }
 
-    .profile {
+    .canvas {
         background-color: #e9e6e4;
-        max-width: 1350px;
+        height: 100%;
+        width: 100%;
+
         display: grid;
-        height: 90vh;
-        max-height: 800px;
-        overflow: hidden;
         grid-template-columns: 15% 20% 35% 30%;
         grid-template-rows: 100%;
-        width: 100%;
-        padding: 40px 4px;
-        position: relative;
+        overflow: hidden;
+    }
+
+    .sidebar-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .sidebar {
-        padding: 0 20px;
-    }
-
-    .sidebar:not(:last-child) {
-        border-right: 1px solid #94918f;
+        height: 90%;
+        padding: 10% 10%;
+        display: flex;
+        flex-direction: column;
+        border-right: 0.05vw solid #94918f;
     }
 
     .sidebar-elem {
-        font-size: 1.6vw;
+        font-family: Geologica, sans-serif;
+        font-weight: 300;
+        font-size: 1.5vw;
         text-decoration: none;
         color: #161419;
-        display: flex;
-        letter-spacing: -0.5px;
-        align-items: center;
     }
 
-    .sidebar-elem+.sidebar-elem {
-        margin-top: 24px;
+    .mid {
+        margin-top: 2vw;
     }
-
-    .sidebar-elem.mentions {
+    .mention {
         margin-top: auto;
-        font-size : 1.4vw;
+        font-size: 1.2vw;
     }
 
-    .sidebar-elem.name {
-        margin-top : 8px;
-        font-size : 1.4vw;
-        position : relative;
+    .name {
+        margin-top: 0.5vw;
+        font-size: 1.2vw;
     }
 </style>
