@@ -4,22 +4,26 @@
             <a href="#" class="sidebar-elem">About</a>
             <a href="#" class="sidebar-elem mid">Works</a>
             <a href="#" class="sidebar-elem mid">Projects</a>
-            <a href="#" class="sidebar-elem mention">@K2E7</a>
+            <a href="#" class="sidebar-elem mention">__K2E7__</a>
             <a href="#" class="sidebar-elem name">Sriparno Ganguly</a>
         </div>
     </div>
-
     <div class="titlebar-cont">
         <div class="titlebar">
             <p class="titlebar-elem header sticky">K2E7</p>
-            <p class="titlebar-elem numero">@0107</p>
+        </div>
+    </div>
+    <div class="content-cont">
+        <div class="content-header">
+            <div class="title header">Python</div>
+            <h2 class="date">12.05.2022</h2>
         </div>
     </div>
 </div>
 
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@200&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@200&family=Share+Tech+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
     body {
         display: flex;
@@ -58,7 +62,7 @@
     .sidebar-elem {
         font-family: Geologica, sans-serif;
         font-weight: 300;
-        font-size: 1.5vw;
+        font-size: 1.3vw;
         text-decoration: none;
         color: #161419;
     }
@@ -89,10 +93,15 @@
         padding: 8% 2%;
         display: flex;
         flex-direction: column;
-
     }
 
     .titlebar-elem {
+        transform: translateY(-2vw);
+        margin-bottom: 0;
+        border-bottom: 0.05vw solid #94918f;
+    }
+
+    .header {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 600;
         font-size: 8vw;
@@ -102,16 +111,35 @@
         margin-top: 0;
     }
 
-    .header {
+    /* Content styles */
+    .content-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .content-header {
+        height: 85%;
+        width: 90%;
+        padding: 4% 2%;
+        display: flex;
+        flex-direction: column;
+        border-right: 0.05vw solid #94918f;
+    }
+
+    .title {
         transform: translateY(-2vw);
         margin-bottom: 0;
         border-bottom: 0.05vw solid #94918f;
     }
 
-    .numero {
-        display: flex;
-        justify-content: flex-end;
-        font-size: 4vw;
-        border-right: 0.05vw solid #94918f;
+    .date {
+        font-family: 'Space Grotesk';
+        color : rgba(22,20,25,0.9);
+        text-align: right;
+        margin-top : 0;
+        padding-right: 2px;
     }
 </style>
