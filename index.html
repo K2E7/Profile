@@ -8,19 +8,32 @@
             <a href="#" class="sidebar-elem name">Sriparno Ganguly</a>
         </div>
     </div>
-    <div class="titlebar-cont">
-        <div class="titlebar">
-            <p class="titlebar-elem header sticky">K2E7</p>
+    <div class="content-canvas-cont">
+        <div class="content-canvas">
+            <div class="devname">
+                <div class="header sticky">K2E7</div>
+                <div class="subtitle">Software Developer</div>
+            </div>
+            <div class="content">
+                <div class="header">Python</div>
+                <div class="date">12.05.2022</div>
+            </div>
+            <div class="proname">Analysis of Graph Algorithms</div>
+            <div class="article">
+
+            </div>
         </div>
     </div>
     <div class="content-cont">
         <div class="content-header">
-            <div class="title header">Python</div>
+            <div class="title">
+                <div class="title-header">Python</div>
+                <div class="date">12.05.2022</div>
+            </div>
             <h2 class="date">12.05.2022</h2>
         </div>
     </div>
 </div>
-
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Martian+Mono:wght@200&family=Share+Tech+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
@@ -38,7 +51,7 @@
         width: 100%;
 
         display: grid;
-        grid-template-columns: 15% 20% 35% 30%;
+        grid-template-columns: 15% 60% 25%;
         grid-template-rows: 100%;
         overflow: hidden;
     }
@@ -81,24 +94,20 @@
         font-size: 1.2vw;
     }
 
-    /* Titlebar Content */
-    .titlebar-cont {
+    /*Content Canvas*/
+    .content-canvas-cont {
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
-    .titlebar {
-        height: 85%;
-        padding: 8% 2%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .titlebar-elem {
-        transform: translateY(-2vw);
-        margin-bottom: 0;
-        border-bottom: 0.05vw solid #94918f;
+    
+    .content-canvas {
+        height: 90%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 30% 70%;
+        overflow: hidden;
     }
 
     .header {
@@ -109,6 +118,57 @@
         text-decoration: none;
         color: #161419;
         margin-top: 0;
+    }
+
+    .devname {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 0.05vw solid #94918f;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 0.05vw solid #94918f;
+    }
+
+    .date {
+        font-family: 'Space Grotesk';
+        font-size: 2vw;
+        color: rgba(22, 20, 25, 0.9);
+        text-align: right;
+        margin-top: 0;
+        padding-right: 2px;
+    }
+
+    .subtitle {
+        font-family: 'Space Grotesk';
+        font-size: 2vw;
+        color: rgba(22, 20, 25, 0.9);
+        text-align: right;
+        margin-top: 0;
+    }
+
+    /* Titlebar Content */
+    .titlebar-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .titlebar {
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        border-right: 0.05vw solid #94918f;
+    }
+
+    .titlebar-elem {
+        transform: translateY(-2vw);
+        margin-bottom: 0;
+        border-bottom: 0.05vw solid #94918f;
+        border-top: 0.05vw solid #94918f;
     }
 
     /* Content styles */
@@ -123,7 +183,6 @@
     .content-header {
         height: 85%;
         width: 90%;
-        padding: 4% 2%;
         display: flex;
         flex-direction: column;
         border-right: 0.05vw solid #94918f;
@@ -133,13 +192,21 @@
         transform: translateY(-2vw);
         margin-bottom: 0;
         border-bottom: 0.05vw solid #94918f;
+        border-top: 0.05vw solid #94918f;
     }
 
-    .date {
-        font-family: 'Space Grotesk';
-        color : rgba(22,20,25,0.9);
+
+
+    /* Movement Styling */
+    .changing-title-cont {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+
+    }
+
+    .changing-title {
         text-align: right;
-        margin-top : 0;
-        padding-right: 2px;
+        font-family: 'Geologica', slab-serif;
     }
 </style>
