@@ -1,5 +1,5 @@
 <div class="canvas">
-    <div class="sidebar-cont collapse">
+    <div class="sidebar-container collapse">
         <div class="sidebar">
             <a href="#" class="sidebar-elem">About</a>
             <a href="#" class="sidebar-elem mid">Works</a>
@@ -8,29 +8,19 @@
             <a href="#" class="sidebar-elem name">Sriparno Ganguly</a>
         </div>
     </div>
-    <div class="content-left">
-        <div class="header sticky">K2E7</div>
-        <div class="subtitle">Software Developer</div>
-        <div class="proname-cont">
-            <div class="proname">
-                Analysis of<br>
-                Graph Algorithms
+    <div class="left-container">
+        <div class="content-left">
+            <div class="header-container">
+                <div class="header">K2E7</div>
+                <div class="subtitle">Software Developer</div>
             </div>
         </div>
     </div>
-    <div class="content-right">
-        <div class="header">Python</div>
-        <div class="date">12.05.2022</div>
-        <div class="article"></div>
-    </div>
-
-    <div class="content-cont">
-        <div class="content-header">
-            <div class="title">
-                <div class="title-header">Python</div>
-                <div class="date">12.05.2022</div>
+    <div class="right-container">
+        <div class="content-right">
+            <div class="header-container">
+                <div class="header right">Python</div>
             </div>
-            <h2 class="date">12.05.2022</h2>
         </div>
     </div>
 </div>
@@ -56,20 +46,38 @@
         overflow: hidden;
     }
 
-    /* Sidebar Content */
-    .sidebar-cont {
+    /* Containers */
+
+    .sidebar-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .sidebar {
-        height: 85%;
-        padding: 1vw 2vw;
+    .left-container {
         display: flex;
         flex-direction: column;
-        border-right: 0.05vw solid #94918f;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Sidebar */
+
+    .sidebar {
+        height: 85%;
+        width: 95%;
+        padding: 1vw 0;
+        display: flex;
+        flex-direction: column;
+        border: 0.05vw solid #94918f;
     }
 
     .sidebar-elem {
@@ -78,6 +86,8 @@
         font-size: 1.5vw;
         text-decoration: none;
         color: #161419;
+
+        padding-left: 1.5vw;
     }
 
     .mid {
@@ -86,15 +96,33 @@
 
     .mention {
         margin-top: auto;
-        font-size: 1.2vw;
+        font-size: 1.3vw;
     }
 
     .name {
         margin-top: 0.5vw;
-        font-size: 1.2vw;
+        font-size: 1.3vw;
     }
 
-    /*Content Canvas*/
+    /* Left-Content Regions*/
+
+    .content-left {
+        height: 85%;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        padding: 1vw 0vw;
+        border: 0.05vw solid #94918f;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1vw 1.5vw;
+    }
+
     .header {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 600;
@@ -106,24 +134,25 @@
         transform: translateY(-2vw);
     }
 
-    .content-left {
-        height: 85%;
-        padding: 1vw 2vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: center;
+    .subtitle {
+        font-family: 'Space Grotesk';
+        font-size: 2vw;
+        color: rgba(22, 20, 25, 0.9);
+        text-align: center;
+        margin-top: 0;
+        /*transform: translateY(-2vw);*/
         border-bottom: 0.05vw solid #94918f;
     }
 
+    /* Right-Container Regions */
+
     .content-right {
         height: 85%;
-        padding: 1vw 2vw;
-        padding-left: 1vw;
+        width: 95%;
         display: flex;
         flex-direction: column;
-        align-self: center;
-        border-bottom: 0.05vw solid #94918f;
+        padding: 1vw 0vw;
+        border: 0.05vw solid #94918f;
     }
 
     .date {
@@ -134,23 +163,13 @@
         margin-top: 0;
         padding-right: 2px;
         transform: translateY(-2vw);
-        border-bottom: 0.05vw solid #94918f;
+        border: 0.05vw solid #94918f;
     }
 
-    .subtitle {
-        font-family: 'Space Grotesk';
-        font-size: 2vw;
-        color: rgba(22, 20, 25, 0.9);
-        text-align: center;
-        margin-top: 0;
-        transform: translateY(-2vw);
-        border-bottom: 0.05vw solid #94918f;
-    }
-
-    .proname-cont{
+    .proname-cont {
         width: 95%;
         height: 100%;
-        display:flex;
+        display: flex;
         flex-direction: column-reverse;
         border-right: 0.05vw solid #94918f;
     }
